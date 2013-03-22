@@ -70,7 +70,7 @@ class Chef
                  ui.error "This should never happen: #{n.name} has no FQDN attribute."
               end
 
-        	    if n.automatic_attrs.include?('status')
+              if n.automatic_attrs.include?('status')
                 status = n.automatic['status'].first['status'].to_s
                 run_time = n.automatic['status'].first['run_time'].to_i
                 last_time = Time.parse(n.automatic['status'].first['start_time']).strftime("%Y-%m-%d %H:%M:%S")
